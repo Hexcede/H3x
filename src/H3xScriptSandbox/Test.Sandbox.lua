@@ -8,7 +8,7 @@ assert(not game, "Instance reference security check one failed.")
 assert(not script, "Instance reference security check two failed.")
 assert(not stats(), "Instance return security check failed.")
 assert(not pcall(getfenv, 3), "Get environment security check failed.")
-assert(abc123, "SetEnvironment test failed.")
+assert(abc123, "Custom environment test failed.")
 ]])
 
 ctx:SetEnvironment({abc123 = "abc"}, true)
